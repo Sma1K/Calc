@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/colorBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <EditText
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="5pt"
+            android:textSize="12pt"
+            android:layout_marginTop="12pt"
+            android:id="@+id/etResultFirst"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:enabled="true"
+            android:inputType="numberDecimal">
+        </EditText>
+        <EditText
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="5pt"
+            android:textSize="12pt"
+            android:layout_marginTop="12pt"
+            android:id="@+id/etResultSecond"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:enabled="true"
+            android:inputType="numberDecimal">
+        </EditText>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tvResult"
+        android:textSize="20sp"
+        android:text=""/>
+
+
+    <GridLayout
+        android:theme="@style/Base.TextAppearance.AppCompat.Large.Inverse"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4" android:rowCount="1">
+        <!--FF4081-->
+        <Button android:layout_column="0" android:layout_row="0"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="20dp"
+            android:text="+"
+            android:id="@+id/plusBtn"/>
+        <Button android:layout_column="1" android:layout_row="0"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="20dp"
+            android:text="-"
+            android:id="@+id/minusBtn"/>
+        <Button android:layout_column="2" android:layout_row="0"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="20dp"
+            android:text="*"
+            android:id="@+id/compBtn"/>
+        <Button android:layout_column="3" android:layout_row="0"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="/"
+            android:id="@+id/divBtn"/>
+    </GridLayout>
+
+</LinearLayout>
